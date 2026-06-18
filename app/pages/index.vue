@@ -3,10 +3,10 @@
     <HomeBanner>
       <div
         class="col-12 d-flex flex-column justify-content-center align-items-center text-center"
-        style="background-color: #222222"
+        style="background-color: #1e1e1e"
       >
         <NuxtImg
-          src="/images/haines-city-head-spa-logo.png"
+          src="/images/hialeah-head-spa-logo.png"
           alt="Hialeah Head Spa"
           class="img-fluid"
           width="439"
@@ -114,9 +114,9 @@ const services = [
 
 const packages = [
   {
-    heading: 'Refresh Head Spa',
+    heading: 'Refresh Scalp Rest',
     subHeading: '45 minutes',
-    price: 65,
+    price: 99,
     pricePlus: false,
     image: 'images/services/refresh-head-spa.jpg',
     list: [
@@ -131,8 +131,8 @@ const packages = [
   },
   {
     heading: 'Signature Head Spa',
-    subHeading: '60 minutes',
-    price: 85,
+    subHeading: '75 minutes',
+    price: 175,
     pricePlus: false,
     image: 'images/services/signature-headspa.jpg',
     list: [
@@ -146,8 +146,8 @@ const packages = [
   },
   {
     heading: 'Luxury Head Spa',
-    subHeading: '75 minutes',
-    price: 130,
+    subHeading: '90 minutes',
+    price: 215,
     pricePlus: false,
     image: 'images/services/luxury-headspa.jpg',
     list: [
@@ -176,7 +176,7 @@ const schemaServiceObject = {
       timeRequired: 'PT45M',
       offers: {
         '@type': 'Offer',
-        price: '65',
+        price: '99',
         priceCurrency: 'USD',
         availability: 'https://schema.org/InStock',
       },
@@ -204,7 +204,7 @@ const schemaServiceObject = {
       timeRequired: 'PT60M',
       offers: {
         '@type': 'Offer',
-        price: '85',
+        price: '175',
         priceCurrency: 'USD',
         availability: 'https://schema.org/InStock',
       },
@@ -240,7 +240,7 @@ const schemaServiceObject = {
       timeRequired: 'PT75M',
       offers: {
         '@type': 'Offer',
-        price: '130',
+        price: '215',
         priceCurrency: 'USD',
         availability: 'https://schema.org/InStock',
       },
