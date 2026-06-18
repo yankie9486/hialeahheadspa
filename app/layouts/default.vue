@@ -18,7 +18,7 @@ const topPage = ref<HTMLElement | null>(null);
 const schemaObject = {
   '@context': 'https://schema.org',
   '@type': 'BeautySalon',
-  name: 'Haines City Head Spa',
+  name: 'Hialeah Head Spa',
   image: 'https://hainescityheadspa.com/images/haines-city-head-spa-logo.png',
   url: 'https://hainescityheadspa.com',
   telephone: '(863)326-2211',

@@ -9,7 +9,7 @@
       >
                 <NuxtImg
           src="/images/haines-city-head-spa-logo.png"
-          alt="Haines City Head Spa"
+          alt="Hialeah Head Spa"
           class=" img-fluid"
           width="439"
           height="463"

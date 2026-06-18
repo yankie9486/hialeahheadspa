@@ -7,7 +7,7 @@
       >
         <NuxtImg
           src="/images/haines-city-head-spa-logo.png"
-          alt="Haines City Head Spa"
+          alt="Hialeah Head Spa"
           width="439"
           height="463"
         />
@@ -275,12 +275,12 @@ useHead({
 });
 
 useSeoMeta({
-  title: 'Haines City Head Spa | Scalp Treatments in Davenport & Haines City',
-  ogTitle: 'Haines City Head Spa | Scalp Treatments in Davenport & Haines City',
+  title: 'Hialeah Head Spa | Scalp Treatments in Hialeah',
+  ogTitle: 'Hialeah Head Spa | Scalp Treatments in Hialeah',
   description:
-    'Experience the ultimate scalp health and relaxation at Haines City Head Spa. Serving Davenport and Haines City with deep cleaning and rejuvenation. Book your escape today!',
+    'Experience the ultimate scalp health and relaxation at Hialeah Head Spa. Serving Hialeah with deep cleaning and rejuvenation. Book your escape today!',
   ogDescription:
-    'Experience the ultimate scalp health and relaxation at Haines City Head Spa. Serving Davenport and Haines City with deep cleaning and rejuvenation. Book your escape today!',
+    'Experience the ultimate scalp health and relaxation at Hialeah Head Spa. Serving Hialeah with deep cleaning and rejuvenation. Book your escape today!',
 });
 </script>
 

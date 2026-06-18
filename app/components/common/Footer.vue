@@ -39,7 +39,7 @@
               ></NuxtLink>
             </li>
           </ul>
-          <p class="info footer_text">&copy;{{ currentYear }} Haines City Head Spa</p>
+          <p class="info footer_text">&copy;{{ currentYear }} Hialeah Head Spa</p>
         </div>
       </div>
     </div>

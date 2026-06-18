@@ -40,16 +40,16 @@ export default defineEventHandler(async (event) => {
 
 		<br>
     <p>Warm regards,</p>
-		<p>Haines City Head Spa Team</p>
+		<p>Hialeah Head Spa Team</p>
 		</body>
 		</html>
 		`;
 
     const userEmail = await resend.emails.send({
-      from: 'Haines City Head Spa <forms@updates.hainescityheadspa.com>',
+      from: 'Hialeah Head Spa <forms@updates.hainescityheadspa.com>',
       to: body.reply, // user's email
-      replyTo: 'Haines City Head Spa <hainescityheadspa@gmail.com>',
-      subject: 'Your message to Haines City Head Spa',
+      replyTo: 'Hialeah Head Spa <hainescityheadspa@gmail.com>',
+      subject: 'Your message to Hialeah Head Spa',
       html: userHtml,
     });
 
