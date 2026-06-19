@@ -60,17 +60,16 @@ onUnmounted(() => {
   color: var(--white);
   border: none;
   transition: all 150ms;
-  background-image: -webkit-gradient(linear, bottom top, bottom top, from(var(--purple-500)), color-stop(50%, var(--blue-700)), color-stop(50%, var(--blue-700)));
-  background-image: -o-linear-gradient(bottom, var(--purple-500), var(--blue-700) 50%, var(--blue-700) 50%);
-  background-image: linear-gradient(to top, var(--purple-500), var(--blue-700) 50%, var(--blue-700) 50%);
+  background-image: var(--main-gradient)
+
 
 }
 .scroll-up-btn:hover {
     --spread: 3px;
     --blur: 4px;
-    color: var(--purple-500);    
-    box-shadow: 0px 0px var(--blur) var(--spread) rgba(182,75,203,0.9);
-    -webkit-box-shadow: 0px 0px var(--blur) var(--spread) rgba(182,75,203,0.9);
-    -moz-box-shadow:    0px 0px var(--blur) var(--spread) rgba(182,75,203,0.9);
+    color: var(--purple-200);    
+    box-shadow: 0px 0px var(--blur) var(--spread) var(--color-3);
+    -webkit-box-shadow: 0px 0px var(--blur) var(--spread) var(--color-3);
+    -moz-box-shadow:    0px 0px var(--blur) var(--spread) var(--color-3);
 }
 </style>
