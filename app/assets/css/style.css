@@ -76,7 +76,11 @@
 --color-3: #b43bea;
 --color-4: #f02bde;
 
+
 --white: #ffffff;
+
+--menu-btn-color: var(--color-4);
+--menu-btn-color-hover: var(--color-3);
 
 --main-color-hover: var(--purple-500);
 --main-color: var(--grays-500);
@@ -89,6 +93,8 @@
 --footer-text: var(--purple-50);
 --footer-bg-hover: var(--purple-400);
 --footer-text-hover: var(--purple-50);
+
+--main-gradient: linear-gradient(90deg, var(--color-1) 0%, var(--color-2) 40%, var(--color-3) 70%, var(--color-4) 100%);
 
 }
 
@@ -115,7 +121,7 @@ body ,html{
 }
 
 .bg-purple {
-    background-color: var(--purple-100);
+    background-color: var(--color-2);
 }
 
 .bg-light-gray {
@@ -153,11 +159,17 @@ a:hover {
     margin-left: 10px;
 
 }
+
 .menu-btn span{
-    background-color: var(--purple-200);
+    background-color: var(--menu-btn-color);
     margin-bottom: 4px;
     height: 2px;
     width: 100%;
+    transition: all 450ms;
+}
+
+.menu-btn:hover span {
+    background-color: var(--menu-btn-color-hover);
 }
 
 .menu-btn span.color{
@@ -182,7 +194,7 @@ a:hover {
 }
 
 .navbar.fixed-menu .menu-btn span {
-    background-color: var(--purple-400);
+    background-color: var(--menu-btn-color);
 }
 
 .navbar.fixed-menu {
@@ -409,9 +421,7 @@ ul.side-menu-icons{
     z-index: 1;
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
-    background-image: -webkit-gradient(linear, left top, right top, from(#fff), color-stop(50%, #fff), color-stop(50%, #fff));
-    background-image: -o-linear-gradient(left, #fff, #fff 50%, #fff 50%);
-    background-image: linear-gradient(to right, #fff, #fff 50%, #fff 50%);
+    background-image: var(--main-gradient);
     background-size: 200% 100%;
     background-position: -100%;
     -webkit-transition: all 0.3s ease-in-out;
@@ -435,8 +445,6 @@ ul.side-menu-icons{
 }
 #primary li a:hover {
     background-position: 0;
-    background-image: -webkit-gradient(linear, left top, right top, from(var(--purple-500)), color-stop(50%, var(--blue-700)), color-stop(50%, var(--blue-700)));
-    background-image: -o-linear-gradient(left, var(--purple-500), var(--blue-700) 50%, var(--blue-700) 50%);
     background-image: linear-gradient(to right, var(--purple-500), var(--blue-700) 50%, var(--blue-700) 50%);
 }
 #primary li a:hover:before {
@@ -570,40 +578,6 @@ li.navbar_list:hover{
     height: 100px;
 }
 
-.parallax-img2{
-    background-image: url("../images/parallax-2.jpg");
-    background-repeat: no-repeat;
-    background-position: center center;
-    background-attachment: fixed;
-    background-size: cover;
-    min-height: 655px
-}
-.parallax-color2{
-    background-color: #b07150;
-    background-repeat: no-repeat;
-    background-position: center center;
-    background-attachment: fixed;
-    background-size: cover;
-    min-height: 655px
-}
-
-.parallax-img3{
-    background-image: url("../images/parallax-3.jpg");
-    background-repeat: no-repeat;
-    background-position: center center;
-    background-attachment: fixed;
-    background-size: cover;
-    min-height: 655px
-}
-.parallax-color3{
-    background-color: #111520;
-    background-repeat: no-repeat;
-    background-position: center center;
-    background-attachment: fixed;
-    background-size: cover;
-    min-height: 655px
-}
-
 
 .home .content-area{
     position: absolute;
@@ -667,11 +641,29 @@ li.navbar_list:hover{
     transition: 0.5s ease;
 }
 
-.main-btn {
-    color:var(--purple-100) !important;
+.btn-outline-light {
+    --bs-btn-hover-bg: transparent;
+    --bs-btn-hover-border-color: var(--color-4);
+    --bs-btn-hover-color: var(--color-4);
+}
+
+.btn-outline-light-hover-bg {
+    --bs-btn-border-width:2px;
+    --bs-btn-border-color: var(--white);
+    --bs-btn-hover-bg: var(--white);
+    --bs-btn-hover-border-color: var(--color-2);
+    --bs-btn-color: var(--white);
+    --bs-btn-hover-color: var(--color-2);
+
+
+
+}
+
+.btn-main {
+    color:var(--white) !important;
     background: var(--color-1);
-    background-image: linear-gradient(90deg, var(--color-1) 0%, var(--color-2) 40%, var(--color-3) 70%, var(--color-4) 100%);
-    background-size: 105% 100%;
+    background-image: var(--main-gradient);
+    background-size: 101% 100%;
     background-position: 0;
     -webkit-transition: all 0.3s ease-in-out;
     -o-transition: all 0.3s ease-in-out;
@@ -679,87 +671,20 @@ li.navbar_list:hover{
     border: 1px solid var(--white);
 }
 
-.main-btn:hover {
+.btn-main:hover {
     --spread: 3px;
     --blur: 8px;
     color: var(--purple-200);
-    
     box-shadow: 0px 0px var(--blur) var(--spread) var(--color-4);
     -webkit-box-shadow: 0px 0px var(--blur) var(--spread) var(--color-4);
     -moz-box-shadow:    0px 0px var(--blur) var(--spread) var(--color-4);
-    background-position: -105%;
-    background-image: -webkit-gradient(linear, right top, left top, from(var(--purple-500)), color-stop(50%, var(--blue-700)), color-stop(50%, var(--blue-700)));
-    background-image: -o-linear-gradient(right, var(--purple-500), var(--blue-700) 50%, var(--blue-700) 50%);
-    background-image: linear-gradient(to left, var(--purple-500), var(--blue-700) 50%, var(--blue-700) 50%);
+    /* background-position: -100%; */
+    /* background-image: linear-gradient(90deg, var(--color-1) 0%, var(--color-2) 40%, var(--color-3) 70%, var(--color-4) 100%); */
 }
 
-.brown-btn{
-    background-color: #f7dcd1 ;
-    border: 2px solid rgb(176, 113, 80);
-    color: rgb(176, 113, 80);
-}
 
-.brown-btn:hover, .brown-btn:focus, .brown-btn:active{
-    border: 2px solid rgb(176, 113, 80);
-    color: #fff;
-    background-color: rgb(176, 113, 80);
-}
+/***************Headings START***********/
 
-.chat-btn {
-    border: none;
-    background-color: #f7dcd1;
-    color: rgb(176, 113, 80);
-}
-
-.chat-btn:hover, .chat-btn:focus, .chat-btn:active{
-    border: none;
-    color: #fff;
-    background-color: rgb(170, 114, 80);
-}
-
-.blue-btn{
-    background-color: var(--blue-300) ;
-    border: 2px solid var(--blue-400) ;
-    color: var(--grays-400);
-}
-
-.blue-btn:hover, .brown-btn:focus, .brown-btn:active{
-    border: 2px solid var(--blue-600);
-    color: #fff;
-    background-color: var(--blue-600);
-}
-
-.pink-btn{
-    border: 2px solid #f7dcd1;
-    color: #f7dcd1;
-    background-color: rgb(176, 113, 80);
-}
-.pink-btn:hover, .pink-btn:focus{
-    border: 2px solid #f7dcd1;
-    color: rgb(176, 113, 80);
-    background-color: #f7dcd1;
-}
-
-.white-btn{
-    border: 2px solid #ffffff;
-    color: #ffffff;
-    background-color: #111520;
-}
-.white-btn:hover, .white-btn:focus{
-    border: 2px solid #ffffff;
-    color: #111520;
-    background-color: #ffffff;
-}
-
-/***************ABOUT SECTION START***********/
-.about{
-    padding-top: 125px;
-}
-.about .about-text{
-    font-family: 'Open Sans' , sans-serif;
-    width: 500px;
-    color: #b07150;
-}
 .main-heading{
     font-weight: 600;
     font-size: 2.7rem;
