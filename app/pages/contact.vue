@@ -5,10 +5,10 @@
     <HomeBanner>
       <div
         class="col-12 d-flex flex-column justify-content-center align-items-center"
-        style="background-color: #222222"
+        style="background-color: #1e1e1e"
       >
-                <NuxtImg
-          src="/images/haines-city-head-spa-logo.png"
+      <NuxtImg
+          src="/images/hialeah-head-spa-logo.png"
           alt="Hialeah Head Spa"
           class=" img-fluid"
           width="439"
