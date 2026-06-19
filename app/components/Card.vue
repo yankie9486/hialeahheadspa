@@ -32,8 +32,8 @@ defineProps<{
 }
 
 .feature-icon .bg-feature-icon {
-  background: #004aad;
-  background: linear-gradient(90deg, rgba(0, 74, 173, 1) 0%, rgba(203, 108, 230, 1) 100%);
+  background: var(--color-4);
+  background: linear-gradient(150deg,var(--color-1) 0%,var(--color-2) 30%, var(--color-3) 70%, var(--color-4) 100%);
   padding: 13%;
   -webkit-transition: 0.8s ease;
   -o-transition: 0.8s ease;
@@ -63,7 +63,8 @@ defineProps<{
   border-radius: 12px;
   background-image:
     linear-gradient(#fff, #fff),
-    linear-gradient(90deg, rgba(0, 74, 173, 1) 0%, rgba(203, 108, 230, 1) 100%);
+    linear-gradient(150deg,var(--color-1) 0%,var(--color-2) 30%, var(--color-3) 70%, var(--color-4) 100%);
+
   background-origin: border-box;
   background-clip: padding-box, border-box;
   cursor: pointer;
@@ -78,22 +79,14 @@ defineProps<{
   border-radius: 12px;
   background-image:
     linear-gradient(#fff, #fff),
-    linear-gradient(180deg, rgba(0, 74, 173, 1) 0%, rgba(203, 108, 230, 1) 100%);
+    linear-gradient(300deg,var(--color-1) 0%,var(--color-2) 30%, var(--color-3) 70%, var(--color-4) 100%);
   background-origin: border-box;
   background-clip: padding-box, border-box;
 }
 
-.card:hover .bg-feature-icon {
-  background-color: #b07150;
-}
-
-.card:hover .feature-icon {
-  color: #fff;
-}
-
-.card:hover .service-btn {
-  background-color: #b07150;
-  border: 2px solid #b07150;
-  color: #fff;
+.card:hover .card-btn {
+  background-color: var(--color-3);
+  border: 2px solid var(--color-4);
+  color: var(--white);
 }
 </style>
