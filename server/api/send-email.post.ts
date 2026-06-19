@@ -1,17 +1,22 @@
 import { Resend } from 'resend';
 
 export default defineEventHandler(async (event) => {
+  const config = useRuntimeConfig();
+
   const body = await readBody(event);
 
   const resend = new Resend(process.env.RESEND_API_KEY);
 
+  const bookingUrl = config.public.bookingUrl;
+
   try {
+
     // 1) Email to YOU (business)
     const adminEmail = await resend.emails.send({
       from: 'forms@updates.hainescityheadspa.com',
-      to: 'hainescityheadspa@gmail.com',
+      to: 'hialeahheadspa@gmail.com',
       replyTo: body.reply,
-      subject: body.subject,
+      subject: 'contact form: ' + body.subject,
       html: body.html,
     });
 
@@ -34,7 +39,7 @@ export default defineEventHandler(async (event) => {
 
 		<p>All appointments can be conveniently booked online through our scheduling system.</p>
     <p>Please use the link below to view availability and book at a time that works best for you:</p>
-    <p><a href="https://hainescityheadspa.glossgenius.com">https://hainescityheadspa.glossgenius.com</a></p>
+    <p><a href="${bookingUrl}">${bookingUrl}</a></p>
 		<p>If you have any questions or need assistance before booking, feel free to reply to this email and we’ll be happy to help.</p>
     <p>We look forward to seeing you!</p>
 
