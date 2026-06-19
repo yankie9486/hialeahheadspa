@@ -117,14 +117,13 @@ const packages = [
     pricePlus: false,
     image: 'images/services/refresh-head-spa.jpg',
     list: [
-      'Deep cleansing shampoo',
+      'Double cleanse',
+      'Light exfoliation',
       'Relaxing scalp massage',
-      'Hydrating Mask',
-      'Neck and shoulder massage',
-      'Herbal hot towel wrap',
+      'Hot towel + aromatherapy',
     ],
     description:
-      'Indulge in a refreshing head spa session including, deep cleansing shampoo, relaxing scalp massage, hydrating mask, neck and shoulder massage, and a herbal hot towel wrap. Perfect for first timers or those on short time. ',
+      'Treat your scalp to a transformative Refresh Scalp Reset, designed to purify, nourish, and revitalize for a healthier, rejuvenated foundation.',
   },
   {
     heading: 'Signature Head Spa',
@@ -133,14 +132,23 @@ const packages = [
     pricePlus: false,
     image: 'images/services/signature-headspa.jpg',
     list: [
-      'Includes all Refresh Head Spa services',
-      'Advanced scalp exfoliation',
-      'Custom aromatherapy oils',
-      'Deep hair conditioning treatment',
+      'Double cleanse + steam therapy',
+      'Exfoliating scalp detox',
+      'Extended scalp, neck & shoulder massage',
+      'Treatment mask',
+      'Hot towels + aromatherapy',
+      'Signature Polished Finish',
     ],
     description:
-      'Our most popular session Includes all Refresh Head Spa services Advanced scalp exfoliation Custom aromatherapy oils Deep hair conditioning treatment',
+      'Indulge in our Signature Head Spa for a revitalizing experience that promotes scalp health, relaxation, and rejuvenation, customized just for you. A blow-dry experience delivering luminous shine, soft body, and a refined, long-lasting finish.',
   },
+
+
+	•	Everything in Signature
+	•	Deep conditioning hair treatment
+	•	Facial pressure-point massage
+	•	Extended massage time
+	•	Signature Polished Finish
   {
     heading: 'Luxury Head Spa',
     subHeading: '75 minutes',
@@ -148,14 +156,14 @@ const packages = [
     pricePlus: false,
     image: 'images/services/luxury-headspa.jpg',
     list: [
-      'Includes all Signature Head Spa services',
-      'Warm essential oil scalp ritual',
-      'Gentle facial message & jade rolling',
-      'Silk hair serum finish',
-      'Includes blow out ',
+      'Everything in Signature',
+      'Deep conditioning hair treatment',
+      'Facial pressure-point massage',
+      'Extended massage time',
+      'Signature Polished Finish ',
     ],
     description:
-      'Unwind in absolut luxury Includes all Signature Head Spa services Warm essential oil scalp ritual Gentle facial massage & jade rolling Silk hair serum finish Includes blow out ',
+      'Unwind in our exclusive head spa oasis, where you\'ll experience a blend of lavish treatments designed to rejuvenate your scalp and promote luscious hair. A blow-dry experience delivering luminous shine, soft body, and a refined, long-lasting finish.',
   },
 ];
 

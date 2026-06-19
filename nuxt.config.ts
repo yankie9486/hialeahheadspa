@@ -2,6 +2,11 @@
 export default defineNuxtConfig({
   modules: ['@nuxt/eslint', '@nuxt/scripts', '@nuxt/image', '@nuxtjs/seo'],
   devtools: { enabled: true },
+  runtimeConfig:{
+    public:{
+      bookingUrl: "https://hialeahheadspa.glossgenius.com"
+    }
+  },
   app: {
     head: {
       link: [{ rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' }],
