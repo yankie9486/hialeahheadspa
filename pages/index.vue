@@ -14,7 +14,7 @@
         <div class="d-flex flex-column flex-md-row justify-content-center pt-4 mt-5 gap-4">
           <NuxtLink
             to="https://hainescityheadspa.glossgenius.com"
-            class="btn main-btn btn-lg fw-bold mb-sm-2 mb-md-0"
+            class="btn btn-main btn-lg fw-bold mb-sm-2 mb-md-0"
           >
             Online Booking
           </NuxtLink>
@@ -79,7 +79,7 @@
               <p class="sub-heading">
                 Discover a new level of care that leaves you glowing from inside out.
               </p>
-              <NuxtLink to="/booking" class="btn btn-lg main-btn">Book Now</NuxtLink>
+              <NuxtLink to="/booking" class="btn btn-lg btn-main">Book Now</NuxtLink>
             </div>
           </div>
         </div>

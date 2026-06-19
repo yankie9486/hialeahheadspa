@@ -69,7 +69,7 @@
       <div class="col-lg-12">
         <button
           type="button"
-          class="btn btn-lg main-btn ml-auto mr-auto mt-4 w-100"
+          class="btn btn-lg btn-main ml-auto mr-auto mt-4 w-100"
           :disabled="isLoading"
           @click="sendEmail"
         >
