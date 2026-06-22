@@ -3,9 +3,9 @@
     <div class="container">
       <div class="row">
         <div class="col-12 text-center">
-          <address>3212 Nadine Rd Suite 4, Davenport, FL 33837</address>
+          <address>{{ `${config.public.address} ${config.public.address_2}, ${config.public.city}, ${config.public.state } ${config.public.zip}` }}</address>
           <p class="phone">
-            <a href="tel:(863)326-2211">(863)326-2211</a>
+            <a :href="`tel:${config.public.phone}`">{{ config.public.phone }}</a>
           </p>
 
           <ul class="footer_ul">
@@ -47,7 +47,10 @@
 </template>
 
 <script setup lang="ts">
+
+const config = useRuntimeConfig();
 const currentYear = new Date().getFullYear();
+
 </script>
 
 <style lang="css" scoped>

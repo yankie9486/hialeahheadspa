@@ -1,4 +1,6 @@
-<script setup lang="ts"></script>
+<script setup lang="ts">
+const config = useRuntimeConfig();
+</script>
 
 <template>
   <main>
@@ -38,8 +40,8 @@
           <div class="col-sm-12 col-md-6 col-lg-4 mt-sm-0 mt-md-0 mt-lg-0 mb-5 mb-md-3 mb-lg-0">
             <Card icon="la-map-marked" title="Where We Are" body="">
               <address class="card-text mb-3">
-                3212 Nadine Rd Suite 4,<br />
-                Davenport, FL 33837
+                {{ `${config.public.address} ${config.public.address_2}` }},<br />
+                {{ `${config.public.city}, ${config.public.state} ${config.public.zip}` }}
               </address>
             </Card>
           </div>
@@ -47,7 +49,7 @@
           <div class="col-sm-12 col-md-6 col-lg-4 mt-5 mt-md-0 mt-lg-0 mb-5 mb-md-0 mb-lg-0">
             <Card icon="la-envelope-open-text" title="Call" body="">
               <p class="card-text mb-3">
-                <a href="tel:(863)326-2211">(863) 326-2211</a>
+                <a :href="`tel:${config.public.phone}`">{{ config.public.phone }}</a>
               </p>
             </Card>
           </div>

@@ -95,6 +95,7 @@
 --footer-text-hover: var(--purple-50);
 
 --main-gradient: linear-gradient(90deg, var(--color-1) 0%, var(--color-2) 40%, var(--color-3) 70%, var(--color-4) 100%);
+--main-gradient-white: linear-gradient(90deg, var(--white) 0%, var(--white) 40%, var(--white) 70%, var(--white) 100%);
 
 }
 
@@ -421,7 +422,7 @@ ul.side-menu-icons{
     z-index: 1;
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
-    background-image: var(--main-gradient);
+    background-image: var(--main-gradient-white);
     background-size: 200% 100%;
     background-position: -100%;
     -webkit-transition: all 0.3s ease-in-out;
@@ -445,7 +446,7 @@ ul.side-menu-icons{
 }
 #primary li a:hover {
     background-position: 0;
-    background-image: linear-gradient(to right, var(--purple-500), var(--blue-700) 50%, var(--blue-700) 50%);
+    background-image: var(--main-gradient);
 }
 #primary li a:hover:before {
     width: 100%;

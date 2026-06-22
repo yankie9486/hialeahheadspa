@@ -4,7 +4,13 @@ export default defineNuxtConfig({
   devtools: { enabled: true },
   runtimeConfig:{
     public:{
-      bookingUrl: "https://hialeahheadspa.glossgenius.com"
+      bookingUrl: 'https://hialeahheadspa.glossgenius.com',
+      address: '750 West 49th Street',
+      address_2: 'Suite 133',
+      city: 'Hialeah', 
+      state: 'FL',
+      zip: '33012',
+      phone: '(786)111-2222'
     }
   },
   app: {
