@@ -9,10 +9,10 @@ const config = useRuntimeConfig();
         class="col-12 d-flex flex-column justify-content-center align-items-center"
         style="background-color: #1e1e1e"
       >
-      <NuxtImg
+        <NuxtImg
           src="/images/hialeah-head-spa-logo.png"
           alt="Hialeah Head Spa"
-          class=" img-fluid"
+          class="img-fluid"
           width="439"
           height="463"
         />

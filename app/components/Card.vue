@@ -33,7 +33,13 @@ defineProps<{
 
 .feature-icon .bg-feature-icon {
   background: var(--color-4);
-  background: linear-gradient(150deg,var(--color-1) 0%,var(--color-2) 30%, var(--color-3) 70%, var(--color-4) 100%);
+  background: linear-gradient(
+    150deg,
+    var(--color-1) 0%,
+    var(--color-2) 30%,
+    var(--color-3) 70%,
+    var(--color-4) 100%
+  );
   padding: 13%;
   -webkit-transition: 0.8s ease;
   -o-transition: 0.8s ease;
@@ -63,7 +69,13 @@ defineProps<{
   border-radius: 12px;
   background-image:
     linear-gradient(#fff, #fff),
-    linear-gradient(150deg,var(--color-1) 0%,var(--color-2) 30%, var(--color-3) 70%, var(--color-4) 100%);
+    linear-gradient(
+      150deg,
+      var(--color-1) 0%,
+      var(--color-2) 30%,
+      var(--color-3) 70%,
+      var(--color-4) 100%
+    );
 
   background-origin: border-box;
   background-clip: padding-box, border-box;
@@ -79,7 +91,13 @@ defineProps<{
   border-radius: 12px;
   background-image:
     linear-gradient(#fff, #fff),
-    linear-gradient(300deg,var(--color-1) 0%,var(--color-2) 30%, var(--color-3) 70%, var(--color-4) 100%);
+    linear-gradient(
+      300deg,
+      var(--color-1) 0%,
+      var(--color-2) 30%,
+      var(--color-3) 70%,
+      var(--color-4) 100%
+    );
   background-origin: border-box;
   background-clip: padding-box, border-box;
 }

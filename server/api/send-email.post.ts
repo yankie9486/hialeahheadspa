@@ -10,7 +10,6 @@ export default defineEventHandler(async (event) => {
   const bookingUrl = config.public.bookingUrl;
 
   try {
-
     // 1) Email to YOU (business)
     const adminEmail = await resend.emails.send({
       from: 'forms@updates.hainescityheadspa.com',

@@ -12,7 +12,6 @@
 </template>
 
 <script lang="ts" setup>
-
 const topPage = ref<HTMLElement | null>(null);
 
 const schemaObject = {
