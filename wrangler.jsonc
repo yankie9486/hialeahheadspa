@@ -2,6 +2,7 @@
   "name": "hialeahheadspa",
   "compatibility_date": "2026-06-30",
   "assets": {
-    "directory": "dist"
+    "directory": "dist",
+    "binding": "ASSETS"
   }
 }
