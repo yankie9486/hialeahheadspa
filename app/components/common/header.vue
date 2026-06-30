@@ -36,7 +36,7 @@
                 <li class="nav-item">
                   <NuxtLink
                     class="nav-link"
-                    to="https://hainescityheadspa.glossgenius.com"
+                    :to="config.public.bookingUrl"
                     @click="closeMenu"
                   >
                     Online Booking
@@ -56,6 +56,7 @@
 
 <script setup lang="ts">
 import { onMounted, onUnmounted, ref } from 'vue';
+const config = useRuntimeConfig();
 
 const isFixedMenu = ref(false);
 const isFixedMenu1 = ref(false);
