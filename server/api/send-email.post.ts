@@ -9,6 +9,11 @@ export default defineEventHandler(async (event) => {
 
   const bookingUrl = config.public.bookingUrl;
 
+  function capitalizeFirstLetter(str: string): string {
+    if (!str) return ''; 
+    return str.charAt(0).toUpperCase() + str.slice(1);
+  }
+
   try {
     // 1) Email to YOU (business)
     const adminEmail = await resend.emails.send({
@@ -32,7 +37,7 @@ export default defineEventHandler(async (event) => {
 		<title>Message received</title>
 		</head>
 		<body>
-		<p>Hi ${body.name},</p>
+		<p>Hi ${capitalizeFirstLetter(body.name)},</p>
 
 		<p>Thank you so much for reaching out! We’d love to have you.</p>
 
@@ -52,7 +57,7 @@ export default defineEventHandler(async (event) => {
     const userEmail = await resend.emails.send({
       from: 'Hialeah Head Spa <forms@updates.hainescityheadspa.com>',
       to: body.reply, // user's email
-      replyTo: 'Hialeah Head Spa <hainescityheadspa@gmail.com>',
+      replyTo: 'Hialeah Head Spa <hialeahheadspa@gmail.com>',
       subject: 'Your message to Hialeah Head Spa',
       html: userHtml,
     });
