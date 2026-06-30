@@ -4,6 +4,6 @@
   "pages_build_output_dir": "./output/public", // Or whatever directory your 'npm run build' outputs static files to (e.g., ./dist or ./public)
   "compatibility_date": "2026-06-30",
   "vars": {
-    // Non-sensitive variables go here
+    "NUXT_PUBLIC_SITE_URL": "hialeahheadspa.com"
   }
 }
