@@ -22,12 +22,6 @@ export default defineNuxtConfig({
       phone: '(786) 575-5228',
     },
   },
-  nitro: {
-    preset: 'cloudflare-pages',
-    prerender: {
-      autoSubfolderIndex: false,
-    }
-  },
   eslint: {
     config: {
       stylistic: {
