@@ -25,6 +25,15 @@ export default defineNuxtConfig({
   compatibilityDate: '2024-11-01',
   nitro: {
     preset: 'cloudflare-pages',
+    prerender: {
+      autoSubfolderIndex: false
+    },
+    routeRules: {
+    '/': { prerender: true },
+    '/contact': { prerender: true },
+    // Do NOT prerender your email API endpoint so it stays a live function
+    '/api/send-email': { prerender: false } 
+  }
   },
   eslint: {
     config: {
