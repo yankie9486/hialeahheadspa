@@ -26,7 +26,7 @@
             <div class="col-sm-12 col-md-5 d-flex justify-content-center align-items-center">
               <ul id="primary" class="navbar-nav">
                 <li class="nav-item">
-                  <NuxtLink class="nav-link active" to="/#home" @click="closeMenu">Home</NuxtLink>
+                  <NuxtLink class="nav-link active" to="/" @click="closeMenu">Home</NuxtLink>
                 </li>
                 <li class="nav-item">
                   <NuxtLink class="nav-link" to="/#experiences" @click="closeMenu"
