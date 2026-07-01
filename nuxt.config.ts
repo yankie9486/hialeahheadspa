@@ -5,6 +5,7 @@ export default defineNuxtConfig({
   app: {
     head: {
       link: [{ rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' }],
+      meta: [{ name: 'google-site-verification', content: 'HrmjKXDI67M5Cg_AlnswPQY-sItqyj5WxNopSJEeauw' }],
     },
     layoutTransition: {
       name: 'layout',
