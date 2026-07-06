@@ -283,12 +283,12 @@ useHead({
 });
 
 useSeoMeta({
-  title: 'Hialeah Head Spa | Scalp Treatments in Davenport & Hialeah',
-  ogTitle: 'Hialeah Head Spa | Scalp Treatments in Davenport & Hialeah',
+  title: 'Hialeah Head Spa | Scalp Treatments in Hialeah | Miami',
+  ogTitle: 'Hialeah Head Spa | Scalp Treatments in Hialeah | Miami',
   description:
-    'Experience the ultimate scalp health and relaxation at Hialeah Head Spa. Serving Davenport and Hialeah with deep cleaning and rejuvenation. Book your escape today!',
+    'Experience the ultimate scalp health and relaxation at Hialeah Head Spa. Serving Hialeah and Miami with deep cleaning and rejuvenation. Book your escape today!',
   ogDescription:
-    'Experience the ultimate scalp health and relaxation at Hialeah Head Spa. Serving Davenport and Hialeah with deep cleaning and rejuvenation. Book your escape today!',
+    'Experience the ultimate scalp health and relaxation at Hialeah Head Spa. Serving Hialeah and Miami with deep cleaning and rejuvenation. Book your escape today!',
 });
 </script>
 
