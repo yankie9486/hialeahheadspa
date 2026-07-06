@@ -13,21 +13,21 @@
 
 <script lang="ts" setup>
 const topPage = ref<HTMLElement | null>(null);
-
+const config = useRuntimeConfig();
 const schemaObject = {
   '@context': 'https://schema.org',
   '@type': 'BeautySalon',
   name: 'Hialeah Head Spa',
   image: 'https://hainescityheadspa.com/images/haines-city-head-spa-logo.png',
   url: 'https://hainescityheadspa.com',
-  telephone: '(863)326-2211',
+  telephone: config.public.phoneNumber,
   priceRange: '$$',
   address: {
     '@type': 'PostalAddress',
-    streetAddress: '3212 Nadine Rd Suite 21',
-    addressLocality: 'Davenport',
-    addressRegion: 'FL',
-    postalCode: '33837',
+    streetAddress: `${config.public.address} ${config.public.address_2}` ,
+    addressLocality: config.public.city,
+    addressRegion: config.public.state,
+    postalCode: config.public.zip,
     addressCountry: 'US',
   },
   geo: {
@@ -45,8 +45,8 @@ const schemaObject = {
     },
   ],
   sameAs: [
-    'https://www.tiktok.com/@hainescityheadspa',
-    'https://www.instagram.com/hainescity_headspa',
+    config.public.socialMedia.instagram,
+    config.public.socialMedia.tiktok,
   ],
   hasOfferCatalog: {
     '@type': 'OfferCatalog',
