@@ -32,17 +32,35 @@ const schemaObject = {
   },
   geo: {
     '@type': 'GeoCoordinates',
-    latitude: 28.156512,
-    longitude: -81.6407979,
+    latitude: config.public.geo.latitude,
+    longitude: config.public.geo.longitude,
   },
   openingHoursSpecification: [
-    {
-      '@type': 'OpeningHoursSpecification',
-      dayOfWeek: ['Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday', 'Sunday'],
-      opens: '10:00',
-      closes: '18:00',
-      byAppointmentOnly: true,
-    },
+  {
+    "@type": "OpeningHoursSpecification",
+    "dayOfWeek": [
+      "Monday",
+      "Tuesday",
+      "Wednesday",
+      "Thursday",
+      "Friday"
+    ],
+    "opens": "09:00",
+    "closes": "19:30"
+  },
+  {
+    "@type": "OpeningHoursSpecification",
+    "dayOfWeek": "Saturday",
+    "opens": "09:00",
+    "closes": "16:00"
+  },
+  {
+    "@type": "OpeningHoursSpecification",
+    "dayOfWeek": "Sunday",
+    "opens": "09:00",
+    "closes": "14:00"
+  }
+
   ],
   sameAs: [
     config.public.socialMedia.instagram,
