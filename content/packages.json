@@ -1,0 +1,49 @@
+[
+  {
+    "heading": "Refresh Scalp Rest",
+    "subHeading": "45 minutes",
+    "timeRequired": "45",
+    "price": 99,
+    "pricePlus": false,
+    "image": "images/services/refresh-head-spa.jpg",
+    "list": [
+      "Deep cleansing shampoo",
+      "Relaxing scalp massage",
+      "Hydrating Mask",
+      "Neck and shoulder massage",
+      "Herbal hot towel wrap"
+    ],
+    "description": "Indulge in a refreshing head spa session including, deep cleansing shampoo, relaxing scalp massage, hydrating mask, neck and shoulder massage, and a herbal hot towel wrap. Perfect for first timers or those on short time."
+  },
+  {
+    "heading": "Signature Head Spa",
+    "subHeading": "75 minutes",
+    "timeRequired": "75",
+    "price": 175,
+    "pricePlus": false,
+    "image": "images/services/signature-headspa.jpg",
+    "list": [
+      "Includes all Refresh Head Spa services",
+      "Advanced scalp exfoliation",
+      "Custom aromatherapy oils",
+      "Deep hair conditioning treatment"
+    ],
+    "description": "Our most popular session Includes all Refresh Head Spa services Advanced scalp exfoliation Custom aromatherapy oils Deep hair conditioning treatment"
+  },
+  {
+    "heading": "Luxury Head Spa",
+    "subHeading": "90 minutes",
+    "timeRequired": "90",
+    "price": 215,
+    "pricePlus": false,
+    "image": "images/services/luxury-headspa.jpg",
+    "list": [
+      "Includes all Signature Head Spa services",
+      "Warm essential oil scalp ritual",
+      "Gentle facial message & jade rolling",
+      "Silk hair serum finish",
+      "Includes blow out "
+    ],
+    "description": "Unwind in absolut luxury Includes all Signature Head Spa services Warm essential oil scalp ritual Gentle facial massage & jade rolling Silk hair serum finish Includes blow out"
+  }
+]
