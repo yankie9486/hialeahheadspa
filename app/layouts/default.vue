@@ -38,7 +38,7 @@ const schemaObject = {
   openingHoursSpecification: [
     {
       '@type': 'OpeningHoursSpecification',
-      dayOfWeek: ['Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday'],
+      dayOfWeek: ['Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday', 'Sunday'],
       opens: '10:00',
       closes: '18:00',
       byAppointmentOnly: true,
@@ -47,46 +47,7 @@ const schemaObject = {
   sameAs: [
     config.public.socialMedia.instagram,
     config.public.socialMedia.tiktok,
-  ],
-  hasOfferCatalog: {
-    '@type': 'OfferCatalog',
-    name: 'Head Spa Services',
-    itemListElement: [
-      {
-        '@type': 'Offer',
-        itemOffered: {
-          '@type': 'Service',
-          name: 'Refresh Head Spa',
-          description: 'Perfect for first-timers or those short on time',
-          timeRequired: 'PT45M',
-        },
-        price: '65',
-        priceCurrency: 'USD',
-      },
-      {
-        '@type': 'Offer',
-        itemOffered: {
-          '@type': 'Service',
-          name: 'Signature Head Spa',
-          description: 'Our most popular treatment for total renewal',
-          timeRequired: 'PT60M',
-        },
-        price: '85',
-        priceCurrency: 'USD',
-      },
-      {
-        '@type': 'Offer',
-        itemOffered: {
-          '@type': 'Service',
-          name: 'Luxury Head Spa',
-          description: 'Unwind in absolute luxury',
-          timeRequired: 'PT75M',
-        },
-        price: '130',
-        priceCurrency: 'USD',
-      },
-    ],
-  },
+  ]
 };
 useHead({
   script: [
