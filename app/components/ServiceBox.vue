@@ -27,7 +27,6 @@
 
 <script setup lang="ts">
 interface Props {
-  index: number;
   heading?: string;
   subHeading?: string;
   price?: number;
