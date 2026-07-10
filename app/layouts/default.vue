@@ -18,8 +18,8 @@ const schemaObject = {
   '@context': 'https://schema.org',
   '@type': 'BeautySalon',
   name: 'Hialeah Head Spa',
-  image: 'https://hainescityheadspa.com/images/haines-city-head-spa-logo.png',
-  url: 'https://hainescityheadspa.com',
+  image: 'https://hialeahheadspa.com/images/hialeah-head-spa-logo.png',
+  url: 'https://hialeahheadspa.com',
   telephone: config.public.phoneNumber,
   priceRange: '$$',
   address: {
