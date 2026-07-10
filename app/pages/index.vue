@@ -48,16 +48,16 @@
             <div class="line" />
           </div>
         </div>
+        
         <div class="row align-items-stretch">
           <ServiceBox
-            v-for="(item, index) in packages"
+            v-for="(item, index) in packages?.meta?.body"
             :key="index"
-            :index="index"
-            :heading="item.heading"
-            :sub-heading="item.subHeading"
-            :price="item.price"
-            :list="item.list"
-            :description="item.description"
+            :heading="item?.heading || ''"
+            :sub-heading="item?.subHeading"
+            :price="item?.price"
+            :list="item?.list"
+            :description="item?.description"
             :image="item.image"
             :price-plus="item.pricePlus"
           />
@@ -90,7 +90,7 @@
 </template>
 
 <script setup lang="ts">
-import { NuxtImg } from '#components';
+const { data: packages } = await useAsyncData(() => queryCollection('packages').first())
 
 const config = useRuntimeConfig();
 
@@ -114,163 +114,35 @@ const services = [
   },
 ];
 
-const packages = [
-  {
-    heading: 'Refresh Scalp Rest',
-    subHeading: '45 minutes',
-    price: 99,
-    pricePlus: false,
-    image: 'images/services/refresh-head-spa.jpg',
-    list: [
-      'Deep cleansing shampoo',
-      'Relaxing scalp massage',
-      'Hydrating Mask',
-      'Neck and shoulder massage',
-      'Herbal hot towel wrap',
-    ],
-    description:
-      'Indulge in a refreshing head spa session including, deep cleansing shampoo, relaxing scalp massage, hydrating mask, neck and shoulder massage, and a herbal hot towel wrap. Perfect for first timers or those on short time. ',
+const serviceItemList = packages?.value?.meta?.body.map((item: any, index: number) => ({
+  position: index + 1,
+  '@type': 'Service',
+  name: item?.heading || '',
+  description: item?.description || '',
+  serviceType: 'Head Spa Treatment',
+  timeRequired: `PT${item.timeRequired}M`,
+  offers: {
+    '@type': 'Offer',
+    price: item?.price || '',
+    priceCurrency: 'USD',
+    availability: 'https://schema.org/InStock',
   },
-  {
-    heading: 'Signature Head Spa',
-    subHeading: '75 minutes',
-    price: 175,
-    pricePlus: false,
-    image: 'images/services/signature-headspa.jpg',
-    list: [
-      'Includes all Refresh Head Spa services',
-      'Advanced scalp exfoliation',
-      'Custom aromatherapy oils',
-      'Deep hair conditioning treatment',
-    ],
-    description:
-      'Our most popular session Includes all Refresh Head Spa services Advanced scalp exfoliation Custom aromatherapy oils Deep hair conditioning treatment',
-  },
-  {
-    heading: 'Luxury Head Spa',
-    subHeading: '90 minutes',
-    price: 215,
-    pricePlus: false,
-    image: 'images/services/luxury-headspa.jpg',
-    list: [
-      'Includes all Signature Head Spa services',
-      'Warm essential oil scalp ritual',
-      'Gentle facial message & jade rolling',
-      'Silk hair serum finish',
-      'Includes blow out ',
-    ],
-    description:
-      'Unwind in absolut luxury Includes all Signature Head Spa services Warm essential oil scalp ritual Gentle facial massage & jade rolling Silk hair serum finish Includes blow out ',
-  },
-];
+    hasOfferCatalog: {
+        '@type': 'OfferCatalog',
+        name: `${item?.heading} Includes`,
+        itemListElement: item?.list.map( (listItem: any) => {
+          return { '@type': 'Offer', itemOffered: { '@type': 'Service', name: listItem } };
+        })
+      },
+
+}));
 
 const schemaServiceObject = {
   '@context': 'https://schema.org',
   '@type': 'ItemList',
   name: 'Head Spa Services',
-  itemListElement: [
-    {
-      '@type': 'Service',
-      position: 1,
-      name: 'Refresh Scalp Rest',
-      description:
-        'Indulge in a refreshing head spa session including, deep cleansing shampoo, relaxing scalp massage, hydrating mask, neck and shoulder massage, and a herbal hot towel wrap. Perfect for first timers or those on short time. ',
-      serviceType: 'Head Spa Treatment',
-      timeRequired: 'PT45M',
-      offers: {
-        '@type': 'Offer',
-        price: '99',
-        priceCurrency: 'USD',
-        availability: 'https://schema.org/InStock',
-      },
-      hasOfferCatalog: {
-        '@type': 'OfferCatalog',
-        name: 'Refresh Scalp Rest Includes',
-        itemListElement: [
-          { '@type': 'Offer', itemOffered: { '@type': 'Service', name: 'Deep cleansing shampoo' } },
-          { '@type': 'Offer', itemOffered: { '@type': 'Service', name: 'Relaxing scalp massage' } },
-          { '@type': 'Offer', itemOffered: { '@type': 'Service', name: 'Hydrating Mask' } },
-          {
-            '@type': 'Offer',
-            itemOffered: { '@type': 'Service', name: 'Neck and shoulder massage' },
-          },
-          { '@type': 'Offer', itemOffered: { '@type': 'Service', name: 'Herbal hot towel wrap' } },
-        ],
-      },
-    },
-    {
-      '@type': 'Service',
-      position: 2,
-      name: 'Signature Head Spa',
-      description:
-        'Our most popular session Includes all Refresh Head Spa services Advanced scalp exfoliation Custom aromatherapy oils Deep hair conditioning treatment',
-      serviceType: 'Head Spa Treatment',
-      timeRequired: 'PT75M',
-      offers: {
-        '@type': 'Offer',
-        price: '175',
-        priceCurrency: 'USD',
-        availability: 'https://schema.org/InStock',
-      },
-      hasOfferCatalog: {
-        '@type': 'OfferCatalog',
-        name: 'Signature Head Spa Includes',
-        itemListElement: [
-          {
-            '@type': 'Offer',
-            itemOffered: { '@type': 'Service', name: 'Includes all Refresh Head Spa services' },
-          },
-          {
-            '@type': 'Offer',
-            itemOffered: { '@type': 'Service', name: 'Advanced scalp exfoliation' },
-          },
-          {
-            '@type': 'Offer',
-            itemOffered: { '@type': 'Service', name: 'Custom aromatherapy oils' },
-          },
-          {
-            '@type': 'Offer',
-            itemOffered: { '@type': 'Service', name: 'Deep hair conditioning treatment' },
-          },
-        ],
-      },
-    },
-    {
-      '@type': 'Service',
-      position: 3,
-      name: 'Luxury Head Spa',
-      description:
-        'Unwind in absolut luxury Includes all Signature Head Spa services Warm essential oil scalp ritual Gentle facial massage & jade rolling Silk hair serum finish Includes blow out ',
-      serviceType: 'Head Spa Treatment',
-      timeRequired: 'PT1H30M',
-      offers: {
-        '@type': 'Offer',
-        price: '215',
-        priceCurrency: 'USD',
-        availability: 'https://schema.org/InStock',
-      },
-      hasOfferCatalog: {
-        '@type': 'OfferCatalog',
-        name: 'Luxury Head Spa Includes',
-        itemListElement: [
-          {
-            '@type': 'Offer',
-            itemOffered: { '@type': 'Service', name: 'Includes all Signature Head Spa services' },
-          },
-          {
-            '@type': 'Offer',
-            itemOffered: { '@type': 'Service', name: 'Warm essential oil scalp ritual' },
-          },
-          {
-            '@type': 'Offer',
-            itemOffered: { '@type': 'Service', name: 'Gentle facial message & jade rolling' },
-          },
-          { '@type': 'Offer', itemOffered: { '@type': 'Service', name: 'Silk hair serum finish' } },
-          { '@type': 'Offer', itemOffered: { '@type': 'Service', name: 'Includes blow out ' } },
-        ],
-      },
-    },
-  ],
+  itemListElement: serviceItemList
+     
 };
 
 useHead({
