@@ -141,7 +141,7 @@ const sendEmail = async () => {
     const response = await $fetch<FormDataRequest>('/api/send-email', {
       method: 'POST',
       body: {
-        to: 'hainescityheadspa@gmail.com',
+        to: 'hialeahheadspa@gmail.com',
         subject: 'Booking Form',
         reply: user_email.value,
         name: user_name.value,
