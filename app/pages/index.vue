@@ -114,45 +114,6 @@ const services = [
   },
 ];
 
-const serviceItemList = packages?.value?.meta?.body.map((item: any, index: number) => ({
-  position: index + 1,
-  '@type': 'Service',
-  name: item?.heading || '',
-  description: item?.description || '',
-  serviceType: 'Head Spa Treatment',
-  offers: {
-    '@type': 'Offer',
-    price: item?.price || '',
-    priceCurrency: 'USD',
-    availability: 'https://schema.org/InStock',
-  },
-    hasOfferCatalog: {
-        '@type': 'OfferCatalog',
-        name: `${item?.heading} Includes`,
-        itemListElement: item?.list.map( (listItem: any) => {
-          return { '@type': 'Offer', itemOffered: { '@type': 'Service', name: listItem } };
-        })
-      },
-
-}));
-
-const schemaServiceObject = {
-  '@context': 'https://schema.org',
-  '@type': 'ItemList',
-  name: 'Head Spa Services',
-  itemListElement: serviceItemList
-     
-};
-
-useHead({
-  script: [
-    {
-      type: 'application/ld+json',
-      innerHTML: JSON.stringify(schemaServiceObject),
-    },
-  ],
-});
-
 useSeoMeta({
   title: 'Hialeah Head Spa | Scalp Treatments in Hialeah | Miami',
   ogTitle: 'Hialeah Head Spa | Scalp Treatments in Hialeah | Miami',

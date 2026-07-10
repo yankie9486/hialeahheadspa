@@ -13,7 +13,41 @@
 
 <script lang="ts" setup>
 const topPage = ref<HTMLElement | null>(null);
+
 const config = useRuntimeConfig();
+
+const { data: packages } = await useAsyncData(() => queryCollection('packages').first())
+
+const serviceItemList = packages?.value?.meta?.body.map((item: any, index: number) => ({
+  '@type': 'Service',
+  position: index + 1,
+  name: item?.heading || '',
+  description: item?.description || '',
+  serviceType: 'Head Spa Treatment',
+  offers: {
+    '@type': 'Offer',
+    price: item?.price || '',
+    priceCurrency: 'USD',
+    availability: 'https://schema.org/InStock',
+  },
+    hasOfferCatalog: {
+        '@type': 'OfferCatalog',
+        name: `${item?.heading} Includes`,
+        itemListElement: item?.list.map( (listItem: any) => {
+          return { '@type': 'Offer', itemOffered: { '@type': 'Service', name: listItem } };
+        })
+      },
+
+}));
+
+const schemaServiceObject = {
+  '@context': 'https://schema.org',
+  '@type': 'ItemList',
+  name: 'Head Spa Services',
+  itemListElement: serviceItemList
+     
+};
+
 const schemaObject = {
   '@context': 'https://schema.org',
   '@type': 'BeautySalon',
@@ -65,8 +99,10 @@ const schemaObject = {
   sameAs: [
     config.public.socialMedia.instagram,
     config.public.socialMedia.tiktok,
-  ]
+  ],
+  hasOfferCatalog: schemaServiceObject
 };
+
 useHead({
   script: [
     {
