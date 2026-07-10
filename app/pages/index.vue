@@ -120,7 +120,6 @@ const serviceItemList = packages?.value?.meta?.body.map((item: any, index: numbe
   name: item?.heading || '',
   description: item?.description || '',
   serviceType: 'Head Spa Treatment',
-  timeRequired: `PT${item.timeRequired}M`,
   offers: {
     '@type': 'Offer',
     price: item?.price || '',

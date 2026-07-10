@@ -21,6 +21,10 @@ export default defineNuxtConfig({
       state: 'FL',
       zip: '33012',
       phone: '(786) 575-5228',
+      geo: {
+        latitude: 25.866456,
+        longitude: -80.3007936,
+      },
       socialMedia: {
         instagram: 'https://www.instagram.com/hialeah_headspa/',
         tiktok: 'https://www.tiktok.com/@hialeah_headspa',
