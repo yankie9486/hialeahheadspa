@@ -115,8 +115,8 @@ const services = [
 ];
 
 useSeoMeta({
-  title: 'Hialeah Head Spa | Scalp Treatments in Hialeah | Miami',
-  ogTitle: 'Hialeah Head Spa | Scalp Treatments in Hialeah | Miami',
+  title: 'Scalp Treatments in Hialeah | Miami',
+  ogTitle: 'Scalp Treatments in Hialeah | Miami',
   description:
     'Experience the ultimate scalp health and relaxation at Hialeah Head Spa. Serving Hialeah and Miami with deep cleaning and rejuvenation. Book your escape today!',
   ogDescription:
