@@ -1,10 +1,10 @@
 {
-  "name": "nuxt-app",
+  "name": "Hialeah Head Spa",
   "private": true,
   "type": "module",
   "scripts": {
     "build": "nuxi build --preset=cloudflare_pages",
-    "deploy": "npm run build && npx wrangler pages deploy dist",
+    "deploy": "npm run build --preset=cloudflare_pages && npx wrangler pages deploy dist",
     "dev": "nuxt dev",
     "generate": "nuxt generate",
     "preview": "nuxt preview",
