@@ -51,7 +51,7 @@
         
         <div class="row align-items-stretch">
           <ServiceBox
-            v-for="(item, index) in packages?.meta?.body"
+            v-for="(item, index) in packages"
             :key="index"
             :heading="item?.heading || ''"
             :sub-heading="item?.subHeading"
@@ -90,7 +90,7 @@
 </template>
 
 <script setup lang="ts">
-const { data: packages } = await useAsyncData(() => queryCollection('packages').first())
+import packages from '../../content/packages.json';
 
 const config = useRuntimeConfig();
 

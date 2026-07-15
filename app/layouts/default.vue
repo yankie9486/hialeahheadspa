@@ -12,13 +12,13 @@
 </template>
 
 <script lang="ts" setup>
+import packages from '../../content/packages.json';
+
 const topPage = ref<HTMLElement | null>(null);
 
 const config = useRuntimeConfig();
 
-const { data: packages } = await useAsyncData(() => queryCollection('packages').first())
-
-const serviceItemList = packages?.value?.meta?.body.map((item: any, index: number) => ({
+const serviceItemList = packages.map((item: any, index: number) => ({
   '@type': 'Service',
   position: index + 1,
   name: item?.heading || '',
