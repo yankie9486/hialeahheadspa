@@ -6,7 +6,7 @@
         style="background-color: #1e1e1e"
       >
         <NuxtImg
-          src="/images/hialeah-head-spa-logo.png"
+          src="/images/hialeah-head-spa-logo.webp"
           alt="Hialeah Head Spa"
           class="img-fluid"
           width="439"

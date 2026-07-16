@@ -5,7 +5,7 @@
     "timeRequired": "45",
     "price": 99,
     "pricePlus": false,
-    "image": "images/services/refresh-head-spa.jpg",
+    "image": "images/services/refresh-head-spa.webp",
     "list": [
       "Deep cleansing shampoo",
       "Relaxing scalp massage",
@@ -21,7 +21,7 @@
     "timeRequired": "75",
     "price": 175,
     "pricePlus": false,
-    "image": "images/services/signature-headspa.jpg",
+    "image": "images/services/signature-headspa.webp",
     "list": [
       "Includes all Refresh Head Spa services",
       "Advanced scalp exfoliation",
@@ -36,7 +36,7 @@
     "timeRequired": "90",
     "price": 215,
     "pricePlus": false,
-    "image": "images/services/luxury-headspa.jpg",
+    "image": "images/services/luxury-headspa.webp",
     "list": [
       "Includes all Signature Head Spa services",
       "Warm essential oil scalp ritual",
