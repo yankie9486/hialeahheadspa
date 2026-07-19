@@ -4,7 +4,7 @@
       <div class="rates d-flex justify-content-between">
         <div class="info d-flex flex-column justify-content-between">
           <div class="w-100 mb-3">
-            <img :src="props.image" class="object-fit-cover w-100 rounded" />
+            <img :src="props.image" :alt="`${props.heading} ${$props.subHeading}`" class="object-fit-cover w-100 rounded" />
           </div>
           <h3 class="main-heading text-grey font-weight-bold">
             {{ props.heading }}
