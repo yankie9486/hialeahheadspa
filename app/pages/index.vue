@@ -74,8 +74,8 @@
             style="visibility: visible; animation-delay: 700ms; animation-name: fadeInUp"
           >
             <div class="booking_text text-center">
-              <h6 class="heading">Ready to Unwind?</h6>
-              <h2 class="main-heading mb-3">Book your personalized Head Spa Today!</h2>
+              <h2 class="heading">Ready to Unwind?</h2>
+              <h3 class="main-heading mb-3">Book your personalized Head Spa Today!</h3>
               <p class="sub-heading">
                 Discover a new level of care that leaves you glowing from inside out.
               </p>
