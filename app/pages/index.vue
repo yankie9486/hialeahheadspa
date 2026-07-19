@@ -11,6 +11,8 @@
           class="img-fluid"
           width="439"
           height="463"
+          loading="eager"
+          :preload="{ fetchPriority: 'high' }"
         />
         <div class="d-flex flex-column flex-md-row justify-content-center pt-4 mt-5 gap-4">
           <NuxtLink :to="bookingUrl" class="btn btn-main btn-lg fw-bold mb-sm-2 mb-md-0">
