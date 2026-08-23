@@ -19,7 +19,7 @@
     "heading": "Signature Head Spa",
     "subHeading": "75 minutes",
     "timeRequired": "75",
-    "price": 175,
+    "price": 149,
     "pricePlus": false,
     "image": "images/services/signature-headspa.webp",
     "list": [
@@ -34,7 +34,7 @@
     "heading": "Luxury Head Spa",
     "subHeading": "90 minutes",
     "timeRequired": "90",
-    "price": 215,
+    "price": 179,
     "pricePlus": false,
     "image": "images/services/luxury-headspa.webp",
     "list": [
@@ -44,6 +44,6 @@
       "Silk hair serum finish",
       "Includes blow out "
     ],
-    "description": "Unwind in absolut luxury Includes all Signature Head Spa services Warm essential oil scalp ritual Gentle facial massage & jade rolling Silk hair serum finish Includes blow out"
+    "description": "Unwind in absolute luxury Includes all Signature Head Spa services Warm essential oil scalp ritual Gentle facial massage & jade rolling Silk hair serum finish Includes blow out"
   }
 ]
