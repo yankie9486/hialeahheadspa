@@ -1,6 +1,6 @@
 // https://nuxt.com/docs/api/configuration/nuxt-config
 export default defineNuxtConfig({
-  modules: ['@nuxt/eslint', '@nuxt/scripts', '@nuxt/image', '@nuxtjs/seo', '@nuxt/content'],
+  modules: ['@nuxt/eslint', '@nuxt/scripts', '@nuxt/image', '@nuxtjs/seo', '@nuxt/content', 'nuxt-gtag'],
   devtools: { enabled: true },
   app: {
     head: {
@@ -30,6 +30,9 @@ export default defineNuxtConfig({
         tiktok: 'https://www.tiktok.com/@hialeah_headspa',
       },
     },
+  },
+  gtag: {
+    id: 'G-8PDLJMS903', // Replace with your actual Google Analytics ID
   },
   eslint: {
     config: {
