@@ -14,7 +14,7 @@ export default defineNuxtConfig({
   },
   runtimeConfig: {
     public: {
-      bookingUrl: 'http://hialeahheadspa.booksy.com/a/',
+      bookingUrl: 'https://booksy.com/en-us/1800781_hialeah-head-spa_hair-salon_15886_hialeah?do=invite&_branch_match_id=1640684829249457192&utm_medium=profile_share_from_profile&_branch_referrer=H4sIAAAAAAAAA8soKSkottLXT07J0UvKz88urtRLzs/VT03z8TFxTssyNU6yrytKTUstKsrMS49PKsovL04tsnXOKMrPTQUACrrZ%2BzwAAAA=',
       address: '750 West 49th Street',
       address_2: 'Suite 133',
       city: 'Hialeah',
