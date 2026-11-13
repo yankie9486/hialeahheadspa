@@ -8,11 +8,13 @@
       <CommonFooter />
       <CommonScrollUp :to-top="topPage" />
     </div>
+    <GiftCardModal />
   </div>
 </template>
 
 <script lang="ts" setup>
 import packages from '../../content/packages.json';
+import GiftCardModal from '~/components/modals/GiftCardModal.vue';
 
 const topPage = ref<HTMLElement | null>(null);
 
@@ -30,13 +32,13 @@ const serviceItemList = packages.map((item: any, index: number) => ({
     priceCurrency: 'USD',
     availability: 'https://schema.org/InStock',
   },
-    hasOfferCatalog: {
-        '@type': 'OfferCatalog',
-        name: `${item?.heading} Includes`,
-        itemListElement: item?.list.map( (listItem: any) => {
-          return { '@type': 'Offer', itemOffered: { '@type': 'Service', name: listItem } };
-        })
-      },
+  hasOfferCatalog: {
+    '@type': 'OfferCatalog',
+    name: `${item?.heading} Includes`,
+    itemListElement: item?.list.map((listItem: any) => {
+      return { '@type': 'Offer', itemOffered: { '@type': 'Service', name: listItem } };
+    })
+  },
 
 }));
 
@@ -45,7 +47,7 @@ const schemaServiceObject = {
   '@type': 'ItemList',
   name: 'Head Spa Services',
   itemListElement: serviceItemList
-     
+
 };
 
 const schemaObject = {
@@ -58,7 +60,7 @@ const schemaObject = {
   priceRange: '$$',
   address: {
     '@type': 'PostalAddress',
-    streetAddress: `${config.public.address} ${config.public.address_2}` ,
+    streetAddress: `${config.public.address} ${config.public.address_2}`,
     addressLocality: config.public.city,
     addressRegion: config.public.state,
     postalCode: config.public.zip,
@@ -70,30 +72,30 @@ const schemaObject = {
     longitude: config.public.geo.longitude,
   },
   openingHoursSpecification: [
-  {
-    "@type": "OpeningHoursSpecification",
-    "dayOfWeek": [
-      "Monday",
-      "Tuesday",
-      "Wednesday",
-      "Thursday",
-      "Friday"
-    ],
-    "opens": "09:00",
-    "closes": "19:30"
-  },
-  {
-    "@type": "OpeningHoursSpecification",
-    "dayOfWeek": "Saturday",
-    "opens": "09:00",
-    "closes": "16:00"
-  },
-  {
-    "@type": "OpeningHoursSpecification",
-    "dayOfWeek": "Sunday",
-    "opens": "09:00",
-    "closes": "14:00"
-  }
+    {
+      "@type": "OpeningHoursSpecification",
+      "dayOfWeek": [
+        "Monday",
+        "Tuesday",
+        "Wednesday",
+        "Thursday",
+        "Friday"
+      ],
+      "opens": "09:00",
+      "closes": "19:30"
+    },
+    {
+      "@type": "OpeningHoursSpecification",
+      "dayOfWeek": "Saturday",
+      "opens": "09:00",
+      "closes": "16:00"
+    },
+    {
+      "@type": "OpeningHoursSpecification",
+      "dayOfWeek": "Sunday",
+      "opens": "09:00",
+      "closes": "14:00"
+    }
 
   ],
   sameAs: [
